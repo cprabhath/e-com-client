@@ -1,0 +1,75 @@
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 150px auto;
+    width: 200px;
+    height: 60px;
+    color: #787878;
+}
+
+.background{
+    background-image: url("banner1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.shopcategory-loadmore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    width: 200px;
+    height: 60px;
+    border-radius: 75px;
+    background: #00409f;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.search-bar {
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .loader {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Keyframes for fading in */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Keyframes for fading out */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Apply the keyframes to the elements */
+.search-bar.searching,
+.loader.searching {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.main-content.displaying {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.loader:not(.searching),
+.search-bar:not(.searching),
+.main-content:not(.displaying) {
+  animation: fadeOut 0.3s ease-in-out;
+}
